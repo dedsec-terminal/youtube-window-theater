@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <link href="popup.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <div class="container py-5 px-5 w-80">
+      <h1 class="text-xl font-bold text-center text-error">YouTube Window Theater</h1>
+      <div class="divider">Settings</div>
+      <form id="settings-form" action="/">
+<div class="flex flex-col"><label class="label cursor-pointer px-0 flex w-full justify-between py-2 text-base-content"><span class="text-sm">NonStop Playback</span><input id="nonStopEnabled" name="nonStopEnabled" type="checkbox" class="toggle toggle-error" /></label></div>
+        <div class="flex flex-col">
+          <label
+            class="label cursor-pointer px-0 flex w-full justify-between py-2 text-base-content"
+          >
+            <span class="text-sm">Enable Automatically</span>
+            <input id="autoEnable" name="autoEnable" type="checkbox" class="toggle toggle-error" />
+          </label>
+        </div>
+        <div class="flex flex-col">
+          <label
+            class="label cursor-pointer px-0 flex w-full justify-between py-2 text-base-content"
+          >
+            <span class="text-sm">Show Button in Player</span>
+            <input id="showButton" name="showButton" type="checkbox" class="toggle toggle-error" />
+          </label>
+        </div>
+        <div class="divider">Shortcuts</div>
+
+        <div class="ytif-swap">
+          <div class="ytif-swap-off">
+            <div class="flex justify-between items-center">
+              <p class="text-sm py-1">
+                <kbd
+                  class="kbd min-h-[2.2em] min-w-[2.2em] rounded-lg"
+                  id="displayFullscreenShortcut"
+                  >d</kbd
+                >
+                - Toggle Fullscreen
+              </p>
+              <p class="text-sm py-1">
+                <button
+                  type="button"
+                  class="btn btn-link btn-error h-auto p-0 font-normal"
+                  id="editFullscreenShortcut"
+                >
+                  Edit
+                </button>
+              </p>
+            </div>
+          </div>
+          <div class="ytif-swap-on">
+            <div class="flex flex-col">
+              <label
+                class="label cursor-pointer px-0 flex flex-col items-start gap-0 py-2 text-base-content"
+              >
+                <span class="text-sm">Fullscreen shortcut</span>
+                <input
+                  id="fullscreenShortcut"
+                  type="text"
+                  placeholder="Type here"
+                  class="input input-error input-md h-12 mt-1 w-full"
+                />
+              </label>
+              <div class="flex justify-end items-center gap-x-2">
+                <button
+                  type="button"
+                  class="btn btn-link btn-error text-sm h-auto p-0 font-normal"
+                  id="disableShortcut"
+                >
+                  Disable
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-link btn-error text-sm h-auto p-0 font-normal"
+                  id="cancelShortcut"
+                >
+                  Reset
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-link btn-error text-sm h-auto p-0 font-normal"
+                  id="saveShortcut"
+                >
+                  Save
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

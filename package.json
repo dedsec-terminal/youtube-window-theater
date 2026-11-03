@@ -1,0 +1,19 @@
+{
+  "name": "youtube-window-theater",
+  "version": "1.5.0",
+  "private": true,
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/build.mjs --firefox",
+    "build:chrome": "node scripts/build.mjs",
+    "build:firefox": "node scripts/build.mjs --firefox",
+    "test": "node scripts/test-popup-stability.mjs && node scripts/test-port-settings.mjs",
+    "lint:firefox": "web-ext lint --source-dir dist/firefox"
+  },
+  "devDependencies": {
+    "adm-zip": "0.6.1",
+    "esbuild": "0.25.12",
+    "playwright": "1.64.0"
+  }
+}

@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@plugin "daisyui";
+
+.ytif-swap:not(.ytif-active) .ytif-swap-on {
+  display: none;
+}
+
+.ytif-swap.ytif-active .ytif-swap-off {
+  display: none;
+}
