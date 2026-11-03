@@ -15,7 +15,7 @@ manifest.name = 'YouTube Window Theater';
 manifest.version = '1.5.0';
 manifest.action.default_popup = 'popup.html';
 manifest.options_ui = {page:'popup.html',open_in_tab:true};
-if(browserTarget==='firefox'){manifest.background={scripts:['background.js']};manifest.browser_specific_settings={gecko:{id:'youtube-window-theater@antigravity.addon',strict_min_version:'142.0',data_collection_permissions:{required:['none']}}};}
+if(browserTarget==='firefox'){manifest.background={scripts:['background.js']};manifest.browser_specific_settings={gecko:{id:'{e807db27-33a7-4c6b-9878-6f4f6ea623fa}',strict_min_version:'142.0',data_collection_permissions:{required:['none']}}};}
 manifest.content_scripts[0].js.unshift('bridge.js');
 manifest.description = 'Inline fullscreen and uninterrupted YouTube playback.';
 delete manifest.action.default_name;
